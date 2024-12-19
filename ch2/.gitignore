@@ -1,0 +1,6 @@
+**/venv/
+**/__pycache__/
+*.pyc
+**/floats.bin
+**/floats-10M.npy
+**/floating_point_numbers.txt

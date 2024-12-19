@@ -1,0 +1,11 @@
+3.12.7 (main, Oct  1 2024, 11:15:50) [GCC 14.2.1 20240910]
+
+sys.stdout.isatty(): False
+sys.stdout.encoding: utf-8
+
+Trying to output HORIZONTAL ELLIPSIS:
+…
+Trying to output INFINITY:
+∞
+Trying to output CIRCLED NUMBER FORTY TWO:
+㊷
