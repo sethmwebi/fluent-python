@@ -1,5 +1,6 @@
 from array import array
 import math
+from typing import SupportsComplex
 
 class Vector2d:
     __match_args__ = ('x', 'y')
@@ -34,7 +35,7 @@ class Vector2d:
     def __eq__(self, other):
         return tuple(self) == tuple(other)
 
-    def __abs__(self):
+    def __abs__(self) -> float:
         return math.hypot(self.x, self.y)
 
     def __bool__(self):
@@ -53,6 +54,14 @@ class Vector2d:
 
     def __hash__(self):
         return hash((self.x, self.y))
+
+    def __complex__(self) -> complex:
+        return complex(self.x, self.y)
+
+    @classmethod
+    def fromcomplex(cls, datum: SupportsComplex) -> Vector2d: # type: ignore
+        c = complex(datum)
+        return cls(c.real, c.imag)
 
     def angle(self):
         return math.atan2(self.y, self.x)
